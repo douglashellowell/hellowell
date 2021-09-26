@@ -33,6 +33,7 @@ const Blog: NextPage<{ posts: Post[] }> = ({ posts }) => {
             <StyledPostCard key={post.slug}>
               <Link href={`/blog/${post.slug}`}>
                 <a>{post.meta.title}</a>
+                <p>{post.meta.description}</p>
               </Link>
             </StyledPostCard>
           );

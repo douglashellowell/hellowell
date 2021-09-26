@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
-import styles from '../styles/Home.module.css';
+// import styles from '../styles/Home.module.css';
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
+    <div>
+      <main>
         <h2>
           Hey there! <span>👋</span>
         </h2>

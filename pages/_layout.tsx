@@ -42,7 +42,7 @@ const Layout: React.FC<LayoutProps> = ({ children, meta }) => {
       </Head>
       <Header />
       <StyledMain>{children}</StyledMain>
-      <Footer />
+      {/* <Footer />  */}
     </>
   );
 };
