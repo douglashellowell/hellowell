@@ -1,5 +1,8 @@
 import Nav from './Nav';
 import styled from 'styled-components';
+import { ThemeToggleContext } from 'styles/theme';
+import { useContext } from 'react';
+import Link from 'next/link';
 
 const StyledHeader = styled.header`
   text-align: center;
@@ -9,9 +12,13 @@ const StyledHeader = styled.header`
 `;
 
 const Header = () => {
+  const themeToggle = useContext(ThemeToggleContext);
   return (
     <StyledHeader>
-      <h1>Douglas Hellowell</h1>
+      <Link href="/">
+        <h1>Douglas Hellowell</h1>
+      </Link>
+      <button onClick={themeToggle}>🌞/🌝</button>
       <Nav />
     </StyledHeader>
   );
