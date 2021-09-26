@@ -25,10 +25,6 @@ a {
   Colors taken from GitHub's CSS
 */
 
-main {
-  max-width: 90vw;
-}
-
 pre {
   background: #22272e;
   padding: 1rem;

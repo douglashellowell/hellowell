@@ -1,18 +1,26 @@
 import Head from 'next/head';
 import React from 'react';
+import Footer from '~/components/Footer';
 import { PostMeta } from '~/lib/postTypes';
 import Header from '../components/Header';
+import styled from 'styled-components';
 
+const StyledMain = styled.main`
+  width: 90vw;
+  max-width: 700px;
+  margin: auto;
+`;
+
+// might remove
 type LayoutProps = {
-  content: string;
-  meta: PostMeta;
+  meta?: PostMeta;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children, meta, content }) => {
+const Layout: React.FC<LayoutProps> = ({ children, meta }) => {
   return (
-    <main>
+    <>
       <Head>
-        <title>{meta?.title || 'Dougs Blog'}</title>
+        <title>Douglas Hellowell</title>
         <meta name="description" content={meta?.description} />
         <link rel="icon" href="/favicon.ico" />
         <link
@@ -33,8 +41,9 @@ const Layout: React.FC<LayoutProps> = ({ children, meta, content }) => {
         />
       </Head>
       <Header />
-      <article dangerouslySetInnerHTML={{ __html: content }} />
-    </main>
+      <StyledMain>{children}</StyledMain>
+      <Footer />
+    </>
   );
 };
 

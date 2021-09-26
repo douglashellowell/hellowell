@@ -1,25 +1,19 @@
-import Link from 'next/link';
+import Nav from './Nav';
+import styled from 'styled-components';
+
+const StyledHeader = styled.header`
+  text-align: center;
+  background-color: white;
+  /* position: sticky;
+  top: 0; */
+`;
 
 const Header = () => {
   return (
-    <header>
-      <h1>Hellowell</h1>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">
-              <a>About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-          </li>
-          <li>Code</li>
-        </ul>
-      </nav>
-    </header>
+    <StyledHeader>
+      <h1>Douglas Hellowell</h1>
+      <Nav />
+    </StyledHeader>
   );
 };
 

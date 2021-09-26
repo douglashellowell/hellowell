@@ -1,5 +1,5 @@
 import { GetStaticProps, NextPage } from 'next';
-import Layout from 'pages/_layout';
+import { BlogPost } from '~/components/BlogPost';
 import { getAllDocs, getDocBySlug } from '~/lib/docs';
 import markdownToHtml from '~/lib/markdown';
 
@@ -36,9 +36,7 @@ type DocProps = {
 };
 
 const Doc: NextPage<DocProps> = ({ meta, content }) => {
-  console.log({ meta });
-
-  return <Layout meta={meta} content={content} />;
+  return <BlogPost meta={meta} content={content} />;
 };
 
 export default Doc;
