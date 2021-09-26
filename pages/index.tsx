@@ -6,10 +6,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <main className={styles.main}>
         <h2>
-          Hey there!{' '}
-          <span aria-role="img" aria-hidden>
-            👋
-          </span>
+          Hey there! <span>👋</span>
         </h2>
         <p>My name is Doug. (or Douglas, i really don't mind either way)</p>
         <p>
