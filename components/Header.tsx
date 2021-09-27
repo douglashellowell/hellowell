@@ -1,25 +1,45 @@
 import Nav from './Nav';
 import styled from 'styled-components';
-import { ThemeToggleContext } from 'styles/theme';
-import { useContext } from 'react';
+import { ThemeStyles, ThemeToggleContext } from 'styles/theme';
+// import { useContext } from 'react';
 import Link from 'next/link';
 
 const StyledHeader = styled.header`
   text-align: center;
-  background-color: white;
-  /* position: sticky;
-  top: 0; */
+  /* padding-top: ${({ theme }: { theme: ThemeStyles }) => theme.spacing2}; */
+  /* background-color: ${({ theme }: { theme: ThemeStyles }) =>
+    theme.primary}; */
+  background-color: ${({ theme }: { theme: ThemeStyles }) =>
+    theme.themeDarkRed.replace('%23', '#')};
+  position: relative;
+  z-index: 99;
+
+  & > div {
+    max-width: ${({ theme }: { theme: ThemeStyles }) => theme.mainWidth};
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      color: white;
+      cursor: pointer;
+      font-weight: 100;
+    }
+  }
 `;
 
 const Header = () => {
-  const themeToggle = useContext(ThemeToggleContext);
+  // const themeToggle = useContext(ThemeToggleContext);
   return (
     <StyledHeader>
-      <Link href="/">
-        <h1>Douglas Hellowell</h1>
-      </Link>
-      <button onClick={themeToggle}>🌞/🌝</button>
-      <Nav />
+      <div>
+        <Link href="/">
+          <h1>Douglas Hellowell</h1>
+        </Link>
+        <Nav />
+      </div>
     </StyledHeader>
   );
 };

@@ -4,11 +4,15 @@ import Footer from '~/components/Footer';
 import { PostMeta } from '~/lib/postTypes';
 import Header from '../components/Header';
 import styled from 'styled-components';
+import { ThemeStyles } from 'styles/theme';
 
 const StyledMain = styled.main`
-  width: 90vw;
-  max-width: 700px;
-  margin: auto;
+  background-color: ${({ theme }: { theme: ThemeStyles }) => theme.primary};
+  max-width: ${({ theme }: { theme: ThemeStyles }) => theme.mainWidth};
+
+  margin: 0 auto;
+  box-shadow: 0px 0px 10px 5px hsla(0, 0%, 0%, 0.5);
+  padding: ${({ theme }: { theme: ThemeStyles }) => theme.spacing2};
 `;
 
 // might remove

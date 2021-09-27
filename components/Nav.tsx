@@ -1,8 +1,15 @@
 import Link from 'next/link';
+import { useContext } from 'react';
 import styled from 'styled-components';
+import { ThemeStyles, ThemeToggleContext } from 'styles/theme';
+
+const StyledNavWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 const StyledNav = styled.nav`
-  background-color: #dddddd;
+  background-color: ${({ theme }: { theme: ThemeStyles }) => theme.secondary};
   ul {
     display: flex;
     flex-direction: row;
@@ -11,7 +18,6 @@ const StyledNav = styled.nav`
 
     li {
       margin: 0;
-      color: grey;
       padding: 2rem;
 
       &:hover {
@@ -22,21 +28,26 @@ const StyledNav = styled.nav`
 `;
 
 const Nav = () => {
+  const toggleDarkMode = useContext(ThemeToggleContext);
+
   return (
-    <StyledNav>
-      <ul>
-        <li>
-          <Link href="/">
-            <a>About</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </li>
-      </ul>
-    </StyledNav>
+    <StyledNavWrapper>
+      <button onClick={toggleDarkMode}>toggle</button>
+      <StyledNav>
+        <ul>
+          <li>
+            <Link href="/">
+              <a>About</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
+          </li>
+        </ul>
+      </StyledNav>
+    </StyledNavWrapper>
   );
 };
 

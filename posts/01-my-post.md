@@ -15,8 +15,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text paragraph text
 
-[link]()
-
 First, run the development server:
 
 ```bash

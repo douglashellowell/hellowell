@@ -5,8 +5,8 @@ import matter from 'gray-matter';
 const docsDir = path.join(process.cwd(), 'posts');
 
 export function getDocBySlug(slug: string) {
-  const realSlug = slug.replace(/\.mdx$/, '');
-  const fullPath = path.join(docsDir, `${realSlug}.mdx`);
+  const realSlug = slug.replace(/\.md$/, '');
+  const fullPath = path.join(docsDir, `${realSlug}.md`);
   const fileContents = fs.readFileSync(fullPath, 'utf8');
   const { data, content } = matter(fileContents);
 

@@ -12,8 +12,7 @@ export default {
 
 pre {
   background: #ffffff;
-  padding: 1rem;
-  border-radius: 5px;
+
   box-shadow: -5px 5px 10px 0px grey;
 }
 
@@ -146,8 +145,7 @@ pre {
 
 pre {
   background: #22272e;
-  padding: 1rem;
-  border-radius: 5px;
+
   box-shadow: -5px 5px 10px 0px hsla(0, 0%, 0%, 0.466);;
 }
 
