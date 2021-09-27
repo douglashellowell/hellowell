@@ -12,7 +12,7 @@ const StyledMain = styled.main`
 
   margin: 0 auto;
   box-shadow: 0px 0px 10px 5px hsla(0, 0%, 0%, 0.5);
-  padding: ${({ theme }: { theme: ThemeStyles }) => theme.spacing2};
+  padding: ${({ theme }: { theme: ThemeStyles }) => theme.spacing4} 3rem;
 `;
 
 // might remove

@@ -26,6 +26,8 @@ const StyledHeader = styled.header`
       color: white;
       cursor: pointer;
       font-weight: 100;
+      text-indent: 20px;
+      /* text-align: center; */
     }
   }
 `;

@@ -10,7 +10,7 @@ export const BlogPost: React.FC<BlogPostProps> = ({ meta, content }) => {
   return (
     <>
       <Head>
-        <title>{meta?.title || 'Dougs Blog'}</title>
+        <title>Douglas Hellowell || {meta?.title}</title>
         <meta name="description" content={meta?.description} />
       </Head>
       <article dangerouslySetInnerHTML={{ __html: content }} />
